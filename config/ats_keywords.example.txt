@@ -1,0 +1,42 @@
+# Keywords that an ATS (Applicant Tracking System) or a recruiter looks for, read by scripts/offer_keywords.py.
+# Template: copy it to config/ats_keywords.txt (ignored by git) and write the keywords of your own field.
+# One keyword per line: the name to show first, then other spellings, separated by "|".
+# Matching ignores case and accents, and needs whole words. Spellings of 1 or 2 characters must have the same case.
+# Offers are in French: keep the French spellings.
+
+# Tools
+Excel | tableur
+Word
+PowerPoint
+Power BI | PowerBI
+SAP
+Salesforce
+SQL
+Git
+Notion
+Canva
+
+# Methods
+Gestion de projet | pilotage de projet | project management
+Agile | agilité
+Scrum
+Kanban
+Reporting | tableaux de bord
+Veille | veille concurrentielle
+Rédaction | rédaction technique
+Documentation
+
+# Soft skills
+Travail en équipe | esprit d'équipe | teamwork | travail d'équipe
+Autonomie | autonome
+Rigueur | rigoureux | rigoureuse
+Curiosité | curieux | curieuse
+Esprit d'analyse | esprit analytique | capacité d'analyse
+Adaptabilité | capacité d'adaptation
+Polyvalence | polyvalent | polyvalente
+Sens du service | relation client
+
+# Languages
+Anglais | English
+Espagnol | Spanish
+Allemand | German

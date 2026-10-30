@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": ".venv/bin/python",
+      "args": [
+        "mcp/memory/server.py"
+      ]
+    },
+    "la-bonne-alternance": {
+      "command": ".venv/bin/python",
+      "args": [
+        "mcp/la_bonne_alternance/server.py"
+      ]
+    },
+    "ats": {
+      "command": ".venv/bin/python",
+      "args": [
+        "mcp/ats/server.py"
+      ]
+    }
+  }
+}

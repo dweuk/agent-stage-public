@@ -1,0 +1,29 @@
+# secrets and personal data
+*.pdf
+.env*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+credentials*.json
+data/
+reports/
+profile/
+applications/
+config/search.json
+config/ats_keywords.txt
+.claude/skills/search-offers/criteria.md
+.claude/skills/search-offers/searches.md
+*.local.json
+*.db
+tests/*
+!tests/unit/
+!tests/fake_offers.json
+!tests/fake_offer_apply.md
+
+# Environment
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store

@@ -1,0 +1,35 @@
+{
+  "_comment": "Template. Copy it to config/search.json (ignored by git) and replace ALL the values: the places, jobs and company below are only examples. Details: README.md, 'Change the search'.",
+
+  "la_bonne_alternance": {
+    "_comment": "romes: ROME 4.0 code -> your label (see README.md to find a code). departments: postal code prefixes kept for this circle, or null to keep all.",
+    "romes": {
+      "M1203": "Accounting"
+    },
+    "places": {
+      "Lyon + 25 km": {"params": {"latitude": 45.7640, "longitude": 4.8357, "radius": 25}, "departments": ["69"]},
+      "Nantes + 25 km": {"params": {"latitude": 47.2184, "longitude": -1.5536, "radius": 25}, "departments": null}
+    }
+  },
+
+  "ats": {
+    "_comment": "boards: company -> [ATS, board]. ATS: smartrecruiters, greenhouse, lever or ashby. job_title_patterns and zone_cities: regular expression parts, without case. zone_cities is used only when the API gives no postal code.",
+    "boards": {
+      "Example company": ["lever", "exampleboard"]
+    },
+    "job_title_patterns": ["comptab", "accounting", "finance"],
+    "zone_departments": ["69", "44"],
+    "zone_cities": ["lyon", "villeurbanne", "nantes"]
+  },
+
+  "memory": {
+    "_comment": "To detect reposts. department_groups: departments that count as one area. city_areas: name in a city text -> area, when the text has no department number.",
+    "department_groups": {
+      "lyon-area": ["69", "01"]
+    },
+    "city_areas": {
+      "lyon": "lyon-area",
+      "nantes": "44"
+    }
+  }
+}

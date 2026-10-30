@@ -1,0 +1,3 @@
+# The image needs only the dependency list: never send .env, profile/ or data/ to the Docker build.
+*
+!requirements.lock

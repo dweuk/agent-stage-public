@@ -1,0 +1,5 @@
+mcp>=2.3,<3
+httpx>=0.28,<1
+beautifulsoup4>=4.12,<5
+pytest>=8,<10  # tests only: tests/unit/
+# After a change: uv pip compile requirements.txt --universal --generate-hashes --python-version 3.13 -o requirements.lock
