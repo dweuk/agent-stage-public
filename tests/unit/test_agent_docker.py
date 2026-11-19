@@ -2,6 +2,7 @@
 
 import os
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -91,7 +92,11 @@ def test_memory_db_folder_is_mounted(tmp_path):
     assert "MEMORY_DB=/memory/offers.db" in result.stdout.splitlines()
 
 
-@pytest.mark.parametrize("path", ["/tmp/check.db", "/private/tmp/check.db",
+# /private/tmp is the real /tmp of macOS only: on Linux (GitHub Actions), /private does not exist and cannot be created.
+MACOS_ONLY = pytest.mark.skipif(sys.platform != "darwin", reason="/private/tmp exists only on macOS")
+
+
+@pytest.mark.parametrize("path", ["/tmp/check.db", pytest.param("/private/tmp/check.db", marks=MACOS_ONLY),
                                   str(SCRIPT.parents[1] / "x.db"), str(SCRIPT.parents[2] / "x.db")])
 def test_memory_db_refuses_a_folder_with_other_files(path):
     result = run("track", path)
